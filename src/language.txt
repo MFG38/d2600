@@ -1,0 +1,43 @@
+[enu default]
+
+D2600_VERSIONNUM = "Final 1.32";
+
+PRESSKEY = "Press Any Key";
+PRESSYN = "Press Y / N";
+//TXT_YES = "Yep.";
+//TXT_NO = "Nope.";
+DOSY = "Press Y to quit.";
+
+OB_WATER = "%o ran out of oxygen.";
+
+QUITMSG = "But we haven't even gotten\nstarted here!";
+QUITMSG1 = "Geez. Man up and play me,\nyou wimp.";
+QUITMSG2 = "Please don't tell me you've\nfound somebody better.";
+QUITMSG3 = "Oh, come on. Surely I'm not\nthat bad?";
+QUITMSG4 = "ERROR: Unknown command 'quit'.";
+QUITMSG5 = "Too scared to find out what's\nbehind that door, huh?";
+QUITMSG6 = "Please come back! I'm lonely...";
+QUITMSG7 = "It's okay. I promise I won't\nkill you in your sleep...";
+QUITMSG8 = "Well, screw you too!";
+QUITMSG9 = "What's the matter? Am I not\nhard enough?";
+QUITMSG10 = "Go ahead. Tell me you want to quit me.\nI dare you.";
+QUITMSG11 = "Am I a problem to you?";
+QUITMSG12 = "You can't quit me! I'm your life!";
+QUITMSG13 = "Are you trying to tell me I suck?";
+QUITMSG14 = "Whatever. I'm better off\nwithout you anyway.";
+
+GGSAVED = "Game saved.";
+
+STSTR_DQDON = "Wimp mode activated";
+STSTR_DQDOFF = "Wimp mode deactivated";
+STSTR_FAADDED = "Missiles maxed";
+STSTR_KFAADDED = "Missiles + clearances maxed";
+
+MNU_NEWGAME = "Start Game";
+MNU_OPTIONS = "Settings";
+//MNU_CVARSETUP = "D2600 Settings";
+MNU_QUITGAME = "Quit Game";
+MNU_LOADGAME = "Load Game";
+MNU_SAVEGAME = "Save Game";
+
+MNU_CHOOSESKILL = "How tough are you feeling?";

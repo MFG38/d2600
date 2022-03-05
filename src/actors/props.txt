@@ -1,0 +1,87 @@
+actor FloorLamp_Active 23000
+{
+	//$category D2600_Props
+	height 56
+	radius 8
+	health 20
+	mass 0x7FFFFFFF
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	States
+	{
+	Spawn:
+		LMP1 A 5 BRIGHT
+		Loop
+	Death:
+		LMP3 A 1 A_PlaySound("lamp/break")
+		LMP3 A -1
+		Stop
+	}
+}
+
+actor FloorLamp_Inactive 23001
+{
+	//$category D2600_Props
+	height 56
+	radius 8
+	health 20
+	mass 0x7FFFFFFF
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	States
+	{
+	Spawn:
+		LMP2 A 5
+		Loop
+	Death:
+		LMP3 A 1 A_PlaySound("lamp/break")
+		LMP3 A -1
+		Stop
+	}
+}
+
+actor FloorLamp_Broken 23002
+{
+	//$category D2600_Props
+	height 56
+	radius 8
+	+SOLID
+	States
+	{
+	Spawn:
+		LMP3 A 5
+		Loop
+	}
+}
+
+actor WarningLight 23003
+{
+	//$category D2600_Props
+	height 12
+	radius 8
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		RLIT A -1 BRIGHT
+		Stop
+	}
+}
+
+actor RavingSentry 23004
+{
+	//$category D2600_Props
+	height 25
+	radius 12
+	+SOLID
+	States
+	{
+	Spawn:
+		SRAV ABCBADED 2
+		Loop
+	}
+}

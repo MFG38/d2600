@@ -1,0 +1,136 @@
+//All sounds designed by MFG38 except where noted
+
+amb01				amb01
+amb02				amb02
+amb38				raveroom
+
+menu/activate		bomsbeep
+menu/backup			bomsbeep
+menu/change			butnpres
+menu/choose			bomsbeep
+menu/clear			butnpres
+menu/cursor			butnpres
+menu/dismiss		bomsbeep
+menu/invalid		butnpres
+menu/prompt			butnpres
+
+$random	menu/quit	{ sentry/see	assassin/see	ghoul/see	beetle/see	berserker/see	wizard/see	surgeon/see	immortal/see	massacrist/see	gatherer/see	salvaged/see }
+
+general/attack		genatak
+general/explosion	splode		//From SoundFXNow.com
+general/laser		laser		//By Darsycho
+general/flame		flame
+general/pain		genpain
+general/electric	electric
+general/ripperdisc	ripdisc
+
+misc/teleport		teleport
+
+pickup/item			puitem
+pickup/powerup		pupwrup
+
+$random	plpain		{ player/pain1	player/pain2	player/pain3 }
+$random pldeth		{ player/death1	player/death2	player/death3 }
+
+player/pain1	plpain1
+player/pain2	plpain2
+player/pain3	plpain3
+
+player/death1	pldeth1
+player/death2	pldeth2
+player/death3	pldeth3
+
+$playeralias	player	male	*death		pldeth
+$playeralias	player	male	*pain100	plpain
+$playersounddup	player	male	*pain75		*pain100
+$playersounddup	player	male	*pain50		*pain100
+$playersounddup	player	male	*pain25		*pain100
+$playersound	player	male	*grunt		plfall
+$playersounddup	player	male	*land		*grunt
+$playersound	player	male	*usefail	ohbeep
+
+$playeralias	player	female	*death		pldeth
+$playeralias	player	female	*pain100	plpain
+$playersounddup	player	female	*pain75		*pain100
+$playersounddup	player	female	*pain50		*pain100
+$playersounddup	player	female	*pain25		*pain100
+$playersound	player	female	*grunt		plfall
+$playersounddup	player	female	*land		*grunt
+$playersound	player	female	*usefail	ohbeep
+
+$playeralias	player	other	*death		pldeth
+$playeralias	player	other	*pain100	plpain
+$playersounddup	player	other	*pain75		*pain100
+$playersounddup	player	other	*pain50		*pain100
+$playersounddup	player	other	*pain25		*pain100
+$playersound	player	other	*grunt		plfall
+$playersounddup	player	other	*land		*grunt
+$playersound	player	other	*usefail	ohbeep
+
+door/move			doormove
+door/stop			doorstop
+
+platform/move		liftmove
+platform/stop		liftstop
+
+switches/normbutn	butnpres
+
+lamp/break			lampbrk		//From SoundFXNow.com
+
+cannon/fire			pbalfire
+cannon/overheat		ohbeep
+
+missile/fire		mislfire	//From SoundFXNow.com
+
+sentry/idle			sntridle	//Generated with AudioCheck.net's SpectroTyper
+sentry/see			sntrsee		//Generated with AudioCheck.net's SpectroTyper
+sentry/death		sntrdeth	//Generated with AudioCheck.net's SpectroTyper
+
+assassin/idle		assnidle
+assassin/see		assnsee
+assassin/attack		assnatak
+assassin/death		assndeth
+
+ghoul/idle			ghulidle
+ghoul/see			ghulsee
+ghoul/death			ghuldeth
+
+beetle/idle			betlidle
+beetle/see			betlsee
+beetle/attack		betlatak
+beetle/death		betldeth
+
+surgeon/see			surgsee
+surgeon/idle		surgidle
+surgeon/death		surgdeth
+
+wizard/idle			gwizidle	//By Darsycho
+wizard/see			gwizsee		//By Darsycho
+wizard/death		gwizdeth	//By Darsycho
+
+berserker/idle		bersidle
+berserker/see		berssee
+berserker/death		bersdeth
+
+bombshell/beep		bomsbeep
+
+immortal/see		grimsee		//Source sound by Darsycho, edited by MFG38
+immortal/death		grimdeth	//Source sound by Darsycho, edited by MFG38
+
+massacrist/see		masrsee
+massacrist/death	masrdeth
+
+gatherer/see		gathsee
+gatherer/death		gathdeth
+
+salvaged/see		fbossee
+salvaged/death		fbosdeth
+salvaged/active1	fbosact1
+salvaged/active2	fbosact2
+salvaged/active3	fbosact3
+
+$random	salvaged/active	{ salvaged/active1	salvaged/active2	salvaged/active3 }
+
+$ambient 01 amb01 point continuous 1.0
+$ambient 02 amb02 point continuous 1.0
+$ambient 38 amb38 point continuous 1.0

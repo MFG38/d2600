@@ -1,0 +1,37 @@
+//Misc. defines
+#define	SEC			35
+#define	TIC			0.029
+#define	SPAWNTAG	999
+
+//HUD shit
+#define	HUDSIZE_X	640
+#define	HUDSIZE_Y	360
+#define CENTER_X	320.0
+#define CENTER_Y	180.0
+
+//Difficulty levels
+#define WIMP		1
+#define HARDENED	2
+#define VETERAN		3
+#define TOTALBADASS	4
+#define GOD			5
+
+//Enemy spawn IDs
+#define	SENTRY		5
+#define	ASSASSIN	7
+#define	GHOUL		8
+#define	BOMBSHELL	9
+#define	BEETLE		10
+#define	SURGEON		11
+#define	BERSERKER	13
+#define	WIZARD		14
+
+//Health item spawn IDs
+#define	SMALLMED	1
+#define	MEDIUMMED	2
+#define	LARGEMED	3
+#define	SUPERMED	4
+
+//Ammo spawn IDs
+#define	MISSILE		6
+#define	MISSILEPACK	12

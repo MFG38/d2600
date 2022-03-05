@@ -1,0 +1,73 @@
+actor GeeWiz 21007
+{
+	//$category D2600_Enemies
+	spawnid 14
+	health 425
+	painchance 128
+	speed 12
+	height 56
+	radius 16
+	mass 200
+	obituary "A wizard turned %o into a pile of ash."
+	hitobituary "A wizard electrocuted %o."
+	maxstepheight 1
+	activesound "wizard/idle"
+	seesound "wizard/see"
+	painsound "general/pain"
+	deathsound "wizard/death"
+	MONSTER
+	+NOBLOOD
+	+MISSILEEVENMORE
+	States
+	{
+	Spawn:
+		GWIZ ABAC 5 A_Wander
+		GWIZ A 0 A_Look
+		Loop
+	See:
+		GWIZ ABAC 5 A_Chase
+		Loop
+	Missile:
+		GWIZ D 4 A_FaceTarget
+		GWIZ E 0 A_PlaySound("general/electric")
+		GWIZ EF 4
+		GWIZ E 4 A_CustomMissile("WizardShot",30)
+		GWIZ F 4
+		Goto See
+	Melee:
+		GWIZ D 4 A_FaceTarget
+		GWIZ E 0 A_PlaySound("general/electric")
+		GWIZ EFEF 4 A_CustomMeleeAttack(6)
+		Goto See
+	Pain:
+		GWIZ G 2 BRIGHT A_Pain
+		GWIZ A 2
+		GWIZ G 2 BRIGHT
+		Goto See
+	Death:
+		GWIZ G 4 A_Scream
+		GWIZ GGGGGGGGGG 4 A_FadeOut(0.1)
+		Stop
+	}
+}
+
+actor WizardShot
+{
+	height 16
+	radius 8
+	damage 9
+	speed 12
+	renderstyle translucent
+	alpha 0.9
+	PROJECTILE
+	seesound "general/laser"
+	States
+	{
+	Spawn:
+		WPRJ A 1
+		Loop
+	Death:
+		WPRJ A 2
+		Stop
+	}
+}

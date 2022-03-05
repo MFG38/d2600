@@ -1,0 +1,19 @@
+actor TeleportFog2 : TeleportFog replaces TeleportFog
+{
+	States
+	{
+	Spawn:
+		TELP ABCDCBA 3 BRIGHT
+		Stop
+	}
+}
+
+actor Nada
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		Stop
+	}
+}

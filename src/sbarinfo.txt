@@ -1,0 +1,100 @@
+statusbar normal, fullscreenoffsets, forcescaled
+{
+	ininventory IsPlaying
+	{
+		drawimage "HUD_HLTH",2,-34;
+		drawnumber 3,DBIGFONT,white,Health,alignment(left)|fillzeros,8,-27;
+	
+		drawimage "HUD_MISS",-46,-34;
+		drawnumber 3,DBIGFONT,white,Ammo2,alignment(right)|fillzeros,-10,-27;
+	
+		ininventory LaserCannon
+		{
+			drawnumber 3,SMALLFONT,red,Ammo LaserOverheat,alignment(right),-4,-44;
+		}
+	
+		ininventory ThunderballCannon
+		{
+			drawnumber 3,SMALLFONT,cyan,Ammo ThunderballOverheat,alignment(right),-4,-53;
+		}
+	
+		ininventory TripleCannon
+		{
+		drawnumber 3,SMALLFONT,darkred,Ammo TripleOverheat,alignment(right),-4,-62;
+		}
+
+		drawimage "HUD_PWR",2,2;
+		drawselectedinventory SMALLFONT,4,4;
+	
+		drawimage "HUD_KEY",-17,2;
+		ininventory ClearanceCard_Level1
+		{
+			drawimage "KEY_KLV1",-15,4;
+		}
+		ininventory ClearanceCard_Level2
+		{
+			drawimage "KEY_KLV2",-15,4;
+		}
+		ininventory ClearanceCard_Level3
+		{
+			drawimage "KEY_KLV3",-15,4;
+		}
+		ininventory ClearanceCard_Level4
+		{
+			drawimage "KEY_KLV4",-15,4;
+		}
+	}
+}
+
+statusbar fullscreen, fullscreenoffsets, forcescaled
+{
+	ininventory IsPlaying
+	{
+		drawimage "HUD_HLTH",2,-34;
+		drawnumber 3,DBIGFONT,white,Health,alignment(left)|fillzeros,8,-27;
+	
+		drawimage "HUD_MISS",-46,-34;
+		drawnumber 3,DBIGFONT,white,Ammo2,alignment(right)|fillzeros,-10,-27;
+	
+		ininventory LaserCannon
+		{
+			drawnumber 3,SMALLFONT,red,Ammo LaserOverheat,alignment(right),-4,-44;
+		}
+	
+		ininventory ThunderballCannon
+		{
+			drawnumber 3,SMALLFONT,cyan,Ammo ThunderballOverheat,alignment(right),-4,-53;
+		}
+	
+		ininventory TripleCannon
+		{
+			drawnumber 3,SMALLFONT,darkred,Ammo TripleOverheat,alignment(right),-4,-62;
+		}
+
+		drawimage "HUD_PWR",2,2;
+		drawselectedinventory SMALLFONT,4,4;
+	
+		drawimage "HUD_KEY",-17,2;
+		ininventory ClearanceCard_Level1
+		{
+			drawimage "KEY_KLV1",-15,4;
+		}
+		ininventory ClearanceCard_Level2
+		{
+			drawimage "KEY_KLV2",-15,4;
+		}
+		ininventory ClearanceCard_Level3
+		{
+			drawimage "KEY_KLV3",-15,4;
+		}
+		ininventory ClearanceCard_Level4
+		{
+			drawimage "KEY_KLV4",-15,4;
+		}
+	}
+}
+
+statusbar automap, forcescaled
+{
+	drawimage "",0,0;
+}

@@ -1,0 +1,43 @@
+actor Berserker 21006
+{
+	//$category D2600_Enemies
+	spawnid 13
+	health 600
+	painchance 64
+	speed 8
+	height 64
+	radius 24
+	mass 9999
+	obituary "A berserker crushed %o."
+	maxstepheight 1
+	seesound "berserker/see"
+	activesound "berserker/idle"
+	painsound "general/pain"
+	deathsound "berserker/death"
+	MONSTER
+	+NOBLOOD
+	States
+	{
+	Spawn:
+		BERS ABCBADED 5 A_Wander
+		BERS A 0 A_Look
+		Loop
+	See:
+		BERS ABCBADED 5 A_Chase
+		Loop
+	Melee:
+		BERS F 5 A_FaceTarget
+		BERS G 5
+		BERS H 8 A_CustomMeleeAttack(random(40,50))
+		Goto See
+	Pain:
+		BERS I 2 BRIGHT A_Pain
+		BERS A 2
+		BERS I 2 BRIGHT
+		Goto See
+	Death:
+		BERS I 4 A_Scream
+		BERS IIIIIIIIII 4 A_FadeOut(0.1)
+		Stop
+	}
+}

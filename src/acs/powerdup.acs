@@ -1,0 +1,46 @@
+#library "powerdup"
+#include "zcommon.acs"
+
+
+int iNeedToBePunished = 0;
+int penalty;
+
+script 997 ENTER
+{
+	if(getcvar("d2600_startquaddamage") == 1)
+	{
+		giveinventory("QuadDamagePowerup",1);
+		iNeedToBePunished++;
+	}
+
+	if(getcvar("d2600_startinvul") == 1)
+	{
+		giveinventory("InvulnerabilityPowerup",1);
+		iNeedToBePunished++;
+	}
+
+	if(getcvar("d2600_startregen") == 1)
+	{
+		giveinventory("HealthRegenPowerup",1);
+		iNeedToBePunished++;
+	}
+
+	if(getcvar("d2600_startflight") == 1)
+	{
+		giveinventory("FlightPowerup",1);
+		iNeedToBePunished++;
+	}
+
+	if(getcvar("d2600_startinvisibility") == 1)
+	{
+		giveinventory("InvisibilityPowerup",1);
+		iNeedToBePunished++;
+	}
+}
+
+script 996 ENTER
+{
+	penalty = 10 * iNeedToBePunished;
+
+	setactorproperty(0,APROP_Health,100 - penalty);
+}

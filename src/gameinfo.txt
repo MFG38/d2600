@@ -1,0 +1,2 @@
+startuptitle = "DELIVERANCE 2600"
+startupcolors = "FF00000","0F0F0F"

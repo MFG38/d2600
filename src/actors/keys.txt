@@ -1,0 +1,63 @@
+actor ClearanceCard_Level1 : DoomKey 22000
+{
+	//$category D2600_Keys
+	game Doom
+	spawnid 80
+	inventory.icon "KEY_KLV1"
+	inventory.pickupmessage "Level 1 Clearance Card"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		KLV1 A -1
+		Stop
+	}
+}
+
+actor ClearanceCard_Level2 : DoomKey 22001
+{
+	//$category D2600_Keys
+	game Doom
+	spawnid 81
+	inventory.icon "KEY_KLV2"
+	inventory.pickupmessage "Level 2 Clearance Card"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		KLV2 A -1
+		Stop
+	}
+}
+
+actor ClearanceCard_Level3 : DoomKey 22002
+{
+	//$category D2600_Keys
+	game Doom
+	spawnid 82
+	inventory.icon "KEY_KLV3"
+	inventory.pickupmessage "Level 3 Clearance Card"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		KLV3 A -1
+		Stop
+	}
+}
+
+actor ClearanceCard_Level4 : DoomKey 22003
+{
+	//$category D2600_Keys
+	game Doom
+	spawnid 83
+	inventory.icon "KEY_KLV4"
+	inventory.pickupmessage "Level 4 Clearance Card"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		KLV4 A -1
+		Stop
+	}
+}

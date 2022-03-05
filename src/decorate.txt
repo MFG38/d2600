@@ -1,0 +1,25 @@
+//Non-enemy stuff
+#include "actors/cannon.txt"
+#include "actors/health.txt"
+#include "actors/keys.txt"
+#include "actors/misc.txt"
+#include "actors/particles.txt"
+#include "actors/player.txt"
+#include "actors/powerups.txt"
+#include "actors/props.txt"
+
+//Basic enemies
+#include "actors/enemies/assassin.txt"
+#include "actors/enemies/beetle.txt"
+#include "actors/enemies/berserker.txt"
+#include "actors/enemies/bombshell.txt"
+#include "actors/enemies/ghoul.txt"
+#include "actors/enemies/sentry.txt"
+#include "actors/enemies/surgeon.txt"
+#include "actors/enemies/wizard.txt"
+
+//Bosses
+#include "actors/bosses/gatherer.txt"
+#include "actors/bosses/immortal.txt"
+#include "actors/bosses/massacrist.txt"
+#include "actors/bosses/salvaged.txt"

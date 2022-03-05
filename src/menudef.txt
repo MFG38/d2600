@@ -1,0 +1,82 @@
+//This is mainly for implementing the custom BIGFONT into the menus
+//without the need to make patches for them. I wouldn't even know how to
+//go about doing so.
+
+ListMenu "MainMenu"
+{
+	StaticPatch 88,16,"M_DOOM"
+	Position 112,75
+	TextItem "$MNU_NEWGAME","n","SkillMenu"
+	TextItem "$MNU_OPTIONS","o","OptionsMenu"
+	//TextItem "$MNU_CVARSETUP","","D2600_CvarSetup"
+	TextItem "$MNU_LOADGAME","l","LoadGameMenu"
+	TextItem "$MNU_SAVEGAME","s","SaveGameMenu"
+	TextItem "$MNU_QUITGAME","q","QuitMenu"
+}
+
+ListMenu "SkillMenu"
+{
+	StaticTextCentered 160,20,"$MNU_CHOOSESKILL"
+	Position 112,63
+}
+
+ListMenu "LoadGameMenu"
+{
+	StaticTextCentered 160,-20,"$MNU_LOADGAME"
+	Position 80,54
+	Class "LoadMenu"
+}
+
+ListMenu "SaveGameMenu"
+{
+	StaticTextCentered 160,-20,"$MNU_SAVEGAME"
+	Position 80,54
+	Class "SaveMenu"
+}
+
+/* OptionMenu "OptionsMenu"
+{
+    Title "Setup"
+	Submenu "Deliverance 2600 Options","D2600_CvarSetup"
+	StaticText " "
+    Submenu "Customize Controls","CustomizeControls"
+    Submenu "Mouse Options","MouseOptions"
+    Submenu "Joystick Options","JoystickOptions"
+    StaticText " "
+    Submenu "Player Setup","PlayerMenu"
+    Submenu "Gameplay Options","GameplayOptions"
+    Submenu "Compatibility Options","CompatibilityOptions"
+    Submenu "Automap Options","AutomapOptions"
+    Submenu "HUD Options","HUDOptions"
+    Submenu "Miscellaneous Options","MiscOptions"
+    Submenu "Sound Options","SoundOptions"
+    Submenu "Display Options","VideoOptions"
+    Submenu "Set Video Mode","VideoModeMenu"
+	StaticText " "
+    SafeCommand "Reset to defaults","reset2defaults"
+    SafeCommand "Reset to last saved","reset2saved"
+    Command "Go to console","menuconsole"
+} */
+
+OptionMenu "D2600_CvarSetup"
+{
+	Title "Deliverance 2600 Options"
+	Slider "Critical health screen flash","d2600_flashamount",0.0,1.0,0.1
+	StaticText " "
+	Option "Start with Quad Damage","d2600_startquaddamage","YesNo"
+	Option "Start with Invulnerability","d2600_startinvul","YesNo"
+	Option "Start with Regeneration","d2600_startregen","YesNo"
+	Option "Start with Flight","d2600_startflight","YesNo"
+	Option "Start with Invisibility","d2600_startinvisibility","YesNo"
+	StaticText " "
+	Option "Play credits sequence","d2600_playcredits","YesNo"
+	//StaticText " "
+	Option "Skip autosave messages","d2600_skipsavemsg","YesNo"
+	Option "Refill health on autosave (D2600 God)","d2600_godhprefill","YesNo"
+}
+
+AddOptionMenu "OptionsMenu"
+{
+	StaticText ""
+	Submenu "Deliverance 2600 Settings","D2600_CvarSetup"
+}

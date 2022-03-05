@@ -1,0 +1,77 @@
+actor Surgeon 21005
+{
+	//$category D2600_Enemies
+	spawnid 11
+	health 325
+	painchance 64
+	speed 10
+	height 56
+	radius 12
+	mass 9999
+	obituary "A surgeon gave %o a laser treatment."
+	maxstepheight 1
+	seesound "surgeon/see"
+	activesound "surgeon/idle"
+	painsound "general/pain"
+	deathsound "surgeon/death"
+	MONSTER
+	+NOBLOOD
+	States
+	{
+	Spawn:
+		SURG ABAC 3 A_Wander
+		SURG A 0 A_Look
+		Loop
+	See:
+		SURG ABAC 3 A_Chase
+		Loop
+	Missile:
+		SURG D 4 A_FaceTarget
+		SURG D 5 A_CustomMissile("SurgeonShot",40)
+		SURG D 4
+		Goto See
+	Pain:
+		SURG E 2 BRIGHT A_Pain
+		SURG A 2
+		SURG E 2 BRIGHT
+		Goto See
+	Death:
+		SURG E 4 A_Scream
+		SURG EEEEEEEEEE 4 A_FadeOut(0.1)
+		Stop
+	}
+}
+
+actor SurgeonShot
+{
+	height 4
+	radius 2
+	damage 4
+	speed 35
+	renderstyle translucent
+	alpha 0.9
+	seesound "general/attack"
+	PROJECTILE
+	States
+	{
+	Spawn:
+		SPR2 A 1 BRIGHT A_SpawnItem("SurgeonShotTrail")
+		Loop
+	Death:
+		SPR2 A 2
+		Stop
+	}
+}
+
+actor SurgeonShotTrail
+{
+	renderstyle translucent
+	alpha 0.9
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		SPR2 AAAAAAAAAA 1 BRIGHT A_FadeOut(0.1)
+		Stop
+	}
+}

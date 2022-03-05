@@ -1,0 +1,72 @@
+actor Bombshell 21003
+{
+	//$category D2600_Enemies
+	spawnid 9
+	health 20
+	painchance 255
+	speed 5
+	height 16
+	radius 6
+	mass 100
+	obituary "A bombshell blew %o up."
+	maxstepheight 1
+	painsound "general/pain"
+	deathsound "general/explosion"
+	MONSTER
+	+NODAMAGETHRUST
+	+DONTHARMCLASS
+	+NOBLOOD
+	States
+	{
+	Spawn:
+		BOMS ABCBADED 4 A_Wander
+		BOMS A 0 A_Look
+		Loop
+	See:
+		BOMS ABCBADED 4 A_Chase
+		Loop
+	Melee:
+		BOMS A 6 A_FaceTarget
+		BOMS A 0 A_SetInvulnerable
+		BOMS F 6 BRIGHT A_PlaySound("bombshell/beep")
+		BOMS A 6
+		BOMS F 6 BRIGHT A_PlaySound("bombshell/beep")
+		BOMS A 6
+		BOMS F 6 BRIGHT A_PlaySound("bombshell/beep")
+		BOMS A 6
+		Goto Death
+	Pain:
+		BOMS G 2 BRIGHT A_Pain
+		BOMS A 2
+		BOMS G 2 BRIGHT
+		Goto See
+	Death:
+		BOMS H 4 BRIGHT A_Explode(40,32,XF_NOTMISSILE)
+		BOMS H 0 A_Scream
+		BOMS H 0 A_SpawnItemEx("BombshellParticle",random(-4,4),random(-4,4),random(0,2),0,0,3)
+		BOMS H 0 A_SpawnItemEx("BombshellParticle",random(-4,4),random(-4,4),random(0,2),0,0,3)
+		BOMS H 0 A_SpawnItemEx("BombshellParticle",random(-4,4),random(-4,4),random(0,2),0,0,3)
+		BOMS H 0 A_SpawnItemEx("BombshellParticle",random(-4,4),random(-4,4),random(0,2),0,0,3)
+		BOMS H 0 A_SpawnItemEx("BombshellParticle",random(-4,4),random(-4,4),random(0,2),0,0,3)
+		BOMS I 4 BRIGHT
+		BOMS J 4 BRIGHT
+		TNT1 A -1
+		Stop
+	}
+}
+
+actor BombshellParticle
+{
+	renderstyle translucent
+	alpha 0.8
+	+DONTOVERLAP
+	+NOGRAVITY
+	+NOBLOCKMAP
+	States
+	{
+	Spawn:
+		BOMX ABC 3 BRIGHT
+		TNT1 A 1
+		Stop
+	}
+}

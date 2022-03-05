@@ -1,0 +1,22 @@
+texture FUZZ1
+	pic FUZZ1 tics 1
+	pic FUZZ2 tics 1
+	pic FUZZ3 tics 1
+
+switch BUTN_C1 on pic BUTN_C2 tics 0
+switch BUTN_C2 off pic BUTN_C1 tics 0
+
+switch BUTN_D1 on pic BUTN_D2 tics 0
+switch BUTN_D2 off pic BUTN_D1 tics 0
+
+switch BUTN_U1 on pic BUTN_U2 tics 0
+switch BUTN_U2 off pic BUTN_U1 tics 0
+
+switch BUTNPAN1 on pic BUTNPAN2 tics 0
+switch BUTNPAN2 off pic BUTNPAN1 tics 0
+
+switch BUTNRCT1 on pic BUTNRCT2 tics 0
+switch BUTNRCT2 off pic BUTNRCT1 tics 0
+
+warp texture GRNSHIT
+warp texture LAVA

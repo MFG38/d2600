@@ -1,0 +1,11 @@
+user float d2600_flashamount = 0.1;
+
+server bool d2600_startquaddamage = false;
+server bool d2600_startinvul = false;
+server bool d2600_startregen = false;
+server bool d2600_startflight = false;
+server bool d2600_startinvisibility = false;
+
+server bool d2600_playcredits = true;
+server bool d2600_skipsavemsg = false;
+server bool d2600_godhprefill = false;

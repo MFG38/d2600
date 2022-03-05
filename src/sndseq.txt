@@ -1,0 +1,17 @@
+:D2600Door1
+	door 0
+	playrepeat door/move
+	stopsound door/stop
+end
+
+:D2600Door2
+	door 1
+	playrepeat platform/move
+	stopsound platform/stop
+end
+
+:D2600Platform
+	platform 0
+	playrepeat platform/move
+	stopsound platform/stop
+end

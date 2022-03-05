@@ -1,0 +1,47 @@
+actor DeliverancePlayer : PlayerPawn
+{
+	speed 1
+	health 100
+	radius 15
+	height 56
+	mass 100
+	painchance 255
+	player.maxhealth 999
+	player.displayname "Player"
+	player.startitem "IsPlaying",1
+	player.startitem "PlasmaCannon",1
+	DamageFactor "ThunderballCannon", 0.0	// Credit goes to Dude27th.
+	States
+	{
+	Spawn:
+		PLAY A -1
+		Loop
+	See:
+		PLAY ABCBADED 2
+		Loop
+	Missile:
+		PLAY F 12
+		Goto Spawn
+	Melee:
+		PLAY F 6 BRIGHT
+		Goto Missile
+	Pain:
+		PLAY G 2 BRIGHT
+		PLAY A 2 A_Pain
+		PLAY G 2 BRIGHT
+		Goto Spawn
+	Death:
+		PLAY G 35 A_PlayerScream
+		TNT1 A -1
+		Stop
+	XDeath:
+		PLAY G 35 A_PlayerScream
+		TNT1 A -1
+		Stop
+	}
+}
+
+actor IsPlaying : Inventory
+{
+	inventory.maxamount 1
+}

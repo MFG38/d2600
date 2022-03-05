@@ -1,0 +1,54 @@
+decal SmallDecal 1
+{
+	pic DEC_SM
+	randomflipx
+	randomflipy
+}
+
+decal MediumDecal 2
+{
+	pic DEC_MED
+	randomflipx
+	randomflipy
+}
+
+decal BigDecal 3
+{
+	pic DEC_BIG
+	randomflipx
+	randomflipy
+}
+
+decal MissileDecal 4
+{
+	pic DEC_SPLD
+	randomflipx
+	randomflipy
+}
+
+decal RipperDecal 5
+{
+	pic DEC_RIP
+	randomflipx
+	randomflipy
+}
+
+generator PlasmaShot2 BigDecal
+generator MicroMissile2 MissileDecal
+
+generator SentryShot SmallDecal
+generator GhoulShot SmallDecal
+generator BeetleShot MediumDecal
+generator SurgeonShot SmallDecal
+generator WizardShot BigDecal
+
+generator ImmortalLaser MediumDecal
+generator ImmortalHoming BigDecal
+
+generator MassacristPlasmaBall BigDecal
+generator MassacristThunderball MediumDecal
+
+generator GathererLaserBall MediumDecal
+
+generator SalvagedOnePlasmaBall MediumDecal
+generator SalvagedOneRipperDisc RipperDecal

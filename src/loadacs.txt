@@ -1,0 +1,4 @@
+critflas
+glscan
+overheat
+powerdup

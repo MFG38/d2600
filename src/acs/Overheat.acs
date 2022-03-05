@@ -1,0 +1,39 @@
+// Credit goes to Dude27th for fixing the overheat mechanic.
+
+#library "Overheat"
+#include "zcommon.acs"
+
+Script "OverheatCalculation"	ENTER
+{
+	while(true)
+	{
+		if(CheckInventory("Weapon2")==1)
+			{
+				if(CheckInventory("Overheat2")<1)
+					{	TakeInventory("LaserOverheat",1);	}
+				TakeInventory("ThunderballOverheat",2);
+				TakeInventory("TripleOverheat",2);
+			}
+		else if(CheckInventory("Weapon3")==1)
+			{
+				if(CheckInventory("Overheat3")<1)
+					{	TakeInventory("ThunderballOverheat",1);	}
+				TakeInventory("LaserOverheat",2);
+				TakeInventory("TripleOverheat",2);
+			}
+		else if(CheckInventory("Weapon4")==1)
+			{
+				if(CheckInventory("Overheat4")<1)
+					{	TakeInventory("TripleOverheat",1);	}
+				TakeInventory("LaserOverheat",2);
+				TakeInventory("ThunderballOverheat",2);
+			}
+		else
+			{
+				TakeInventory("LaserOverheat",2);
+				TakeInventory("ThunderballOverheat",2);
+				TakeInventory("TripleOverheat",2);
+			}
+	Delay(18);
+	}
+}

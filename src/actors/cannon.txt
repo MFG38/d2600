@@ -1,0 +1,405 @@
+//Weapon 1
+actor PlasmaCannon : Weapon
+{
+	weapon.slotnumber 1
+	weapon.selectionorder 110
+	weapon.ammotype1 "PlasmaShot"
+	weapon.ammouse1 0
+	weapon.ammotype2 "MicroMissile"
+	weapon.ammouse2 1
+	inventory.pickupmessage ""
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	Ready:
+		//TNT1 A 0 A_TakeInventory("LaserOverheat",2)
+		//TNT1 A 0 A_TakeInventory("ThunderballOverheat",2)
+		//TNT1 A 0 A_TakeInventory("TripleOverheat",2)
+		CAN1 A 18 A_WeaponReady
+		Loop
+	Select:
+		TNT1 A 0 A_GiveInventory("Weapon1",1)
+		CAN1 A 1 A_Raise
+		Loop
+	Deselect:
+		TNT1 A 0 A_TakeInventory("Weapon1",1)
+		CAN1 A 1 A_Lower
+		Loop
+	Fire:
+		CAN1 B 8 A_FireCustomMissile("PlasmaShot2")
+		CAN1 B 0 A_ReFire
+		Goto Ready
+	AltFire:
+		CAN1 C 8 A_FireCustomMissile("MicroMissile2")
+		CAN1 A 16
+		CAN1 A 0 A_ReFire
+		Goto Ready
+	}
+}
+
+actor PlasmaShot : Ammo
+{
+	inventory.maxamount 0
+}
+
+actor PlasmaShot2
+{
+	height 14
+	radius 7
+	damage 5
+	damagetype "normal"
+	speed 30
+	renderstyle translucent
+	alpha 0.7
+	seesound "cannon/fire"
+	PROJECTILE
+	+STRIFEDAMAGE
+	States
+	{
+	Spawn:
+		PBAL A 1 BRIGHT
+		Loop
+	Death:
+		PBAL A 2
+		Stop
+	}
+}
+
+actor MicroMissile : Ammo 19999
+{
+	//$category D2600_Ammo
+	spawnid 6
+	inventory.amount 1
+	inventory.maxamount 999
+	inventory.pickupmessage "Micro Missile"
+	inventory.pickupsound "pickup/item"
+	inventory.icon "MISLA0"
+	+COUNTITEM
+	States
+	{
+	Spawn:
+		MISL A -1 BRIGHT
+		Stop
+	}
+}
+
+actor MicroMissilePack : MicroMissile 19998
+{
+	//$category D2600_Ammo
+	spawnid 12
+	inventory.amount 5
+	inventory.maxamount 999
+	inventory.pickupmessage "Micro Missile Pack"
+	inventory.pickupsound "pickup/item"
+	inventory.icon "MPAKA0"
+	+COUNTITEM
+	States
+	{
+	Spawn:
+		MPAK A -1 BRIGHT
+		Stop
+	}
+}
+
+actor MicroMissile2
+{
+	height 8
+	radius 4
+	//damage (1 * 256)
+	damagetype "missile"
+	speed 24
+	seesound "missile/fire"
+	deathsound "general/explosion"
+	PROJECTILE
+	States
+	{
+	Spawn:
+		MISF A 1 BRIGHT
+		Loop
+	Death:
+		MISF A 2 A_Explode(256,32,1)
+		Stop
+	}
+}
+
+
+//Weapon 2
+actor LaserCannon : Weapon
+{
+	weapon.slotnumber 2
+	weapon.selectionorder 220
+	weapon.ammotype1 "LaserOverheat"
+	weapon.ammouse1 0
+	weapon.ammotype2 "MicroMissile"
+	weapon.ammouse2 1
+	weapon.ammogive 0
+	inventory.pickupmessage "Laser"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		CNP2 A -1
+		Stop
+	Ready:
+		//TNT1 A 0 A_TakeInventory("LaserOverheat",1)
+		//TNT1 A 0 A_TakeInventory("ThunderballOverheat",2)
+		//TNT1 A 0 A_TakeInventory("TripleOverheat",2)
+		CAN2 A 18 A_WeaponReady
+		Loop
+	Select:
+		TNT1 A 0 A_GiveInventory("Weapon2",1)
+		CAN2 A 1 A_Raise
+		Loop
+	Deselect:
+		TNT1 A 0 A_TakeInventory("Weapon2",1)
+		CAN2 A 1 A_Lower
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("LaserOverheat",100,"Cooldown")
+		TNT1 A 0 A_GiveInventory("LaserOverheat",1)
+		CAN2 B 2 A_FireCustomMissile("ImmortalLaser")
+		CAN2 B 0 A_ReFire
+		Goto Ready
+	AltFire:
+		CAN2 C 8 A_FireCustomMissile("MicroMissile2")
+		CAN2 A 16
+		CAN2 A 0 A_ReFire
+		Goto Ready
+	Cooldown:
+		TNT1 A 0 A_GiveInventory("Overheat2",1)
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		TNT1 A 0 A_TakeInventory("Overheat2",1)
+		//CANB B 5 A_PlaySound("cannon/overheat")
+		//CANB A 5
+		//CANB B 5 A_PlaySound("cannon/overheat")
+		//CANB A 5
+		Goto Ready
+	}
+}
+
+actor LaserOverheat : Ammo
+{
+	inventory.maxamount 100
+	-INVENTORY.INVBAR
+}
+
+
+//Weapon 3
+actor ThunderballCannon : Weapon
+{
+	weapon.slotnumber 3
+	weapon.selectionorder 330
+	weapon.ammotype1 "ThunderballOverheat"
+	weapon.ammouse1 0
+	weapon.ammotype2 "MicroMissile"
+	weapon.ammouse2 1
+	weapon.ammogive 0
+	inventory.pickupmessage "Thunderball"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		CNP3 A -1
+		Stop
+	Ready:
+		//TNT1 A 0 A_TakeInventory("LaserOverheat",2)
+		//TNT1 A 0 A_TakeInventory("ThunderballOverheat",1)
+		//TNT1 A 0 A_TakeInventory("TripleOverheat",2)
+		CAN3 A 18 A_WeaponReady
+		Loop
+	Select:
+		TNT1 A 0 A_GiveInventory("Weapon3",1)
+		CAN3 A 1 A_Raise
+		Loop
+	Deselect:
+		TNT1 A 0 A_TakeInventory("Weapon3",1)
+		CAN3 A 1 A_Lower
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("ThunderballOverheat",100,"Cooldown")
+		TNT1 A 0 A_JumpIfInventory("ThunderballOverheat",76,"FireFail")
+		TNT1 A 0 A_GiveInventory("ThunderballOverheat",25)
+		CAN3 B 35 A_FireCustomMissile("ProjectileThunderball")//A_FireCustomMissile("MassacristThunderball")
+		CAN3 A 0 A_ReFire
+		Goto Ready
+	AltFire:
+		CAN3 C 8 A_FireCustomMissile("MicroMissile2")
+		CAN3 A 16
+		CAN3 A 0 A_ReFire
+		Goto Ready
+	Cooldown:
+		TNT1 A 0 A_GiveInventory("Overheat3",1)
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		TNT1 A 0 A_TakeInventory("Overheat3",1)
+		//CANB B 5 A_PlaySound("cannon/overheat")
+		//CANB A 5
+		//CANB B 5 A_PlaySound("cannon/overheat")
+		//CANB A 5
+		Goto Ready
+	FireFail:
+		CANB A 5 A_PlaySound("cannon/overheat")
+		CAN3 A 5
+		Goto Ready
+	}
+}
+
+actor ProjectileThunderball
+// Essentially a duplicate of the Massacrist's Thunderball that doesn't damage the player
+// upon firing - credit goes to Dude27th for this fix.
+{
+	height 16
+	radius 8
+	speed 8
+	renderstyle translucent
+	alpha 0.5
+	seesound "general/laser"
+	DamageType "ThunderballCannon"
+	PROJECTILE
+	States
+	{
+	Spawn:
+		MSP3 ABC 3 BRIGHT A_Explode(5,96,XF_NOTMISSILE)
+		Loop
+	Death:
+		MSP3 A 2
+		Stop
+	}
+}
+
+
+
+actor ThunderballOverheat : Ammo
+{
+	inventory.maxamount 100
+	-INVENTORY.INVBAR
+}
+
+
+//Weapon 4
+actor TripleCannon : Weapon
+{
+	weapon.slotnumber 4
+	weapon.selectionorder 440
+	weapon.ammotype1 "TripleOverheat"
+	weapon.ammouse1 0
+	weapon.ammotype2 "MicroMissile"
+	weapon.ammouse2 1
+	weapon.ammogive 0
+	inventory.pickupmessage "Triple Shot"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		CNP4 A -1
+		Stop
+	Ready:
+		//TNT1 A 0 A_TakeInventory("LaserOverheat",2)
+		//TNT1 A 0 A_TakeInventory("ThunderballOverheat",2)
+		//TNT1 A 0 A_TakeInventory("TripleOverheat",1)
+		CAN4 A 18 A_WeaponReady
+		Loop
+	Select:
+		TNT1 A 0 A_GiveInventory("Weapon4",1)
+		CAN4 A 1 A_Raise
+		Loop
+	Deselect:
+		TNT1 A 0 A_TakeInventory("Weapon4",1)
+		CAN4 A 1 A_Lower
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("TripleOverheat",100,"Cooldown")
+		TNT1 A 0 A_JumpIfInventory("TripleOverheat",86,"FireFail")
+		TNT1 A 0 A_GiveInventory("TripleOverheat",15)
+		CAN4 B 0 A_FireCustomMissile("GathererLaserBall",-5)
+		CAN4 B 0 A_FireCustomMissile("GathererLaserBall",0)
+		CAN4 B 24 A_FireCustomMissile("GathererLaserBall",5)
+		CAN4 A 0 A_ReFire
+		Goto Ready
+	AltFire:
+		CAN4 C 8 A_FireCustomMissile("MicroMissile2")
+		CAN4 A 16
+		CAN4 A 0 A_ReFire
+		Goto Ready
+	Cooldown:
+		TNT1 A 0 A_GiveInventory("Overheat4",1)
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		CANB B 5 A_PlaySound("cannon/overheat")
+		CANB A 5
+		TNT1 A 0 A_TakeInventory("Overheat4",1)
+		//CANB B 5 A_PlaySound("cannon/overheat")
+		//CANB A 5
+		//CANB B 5 A_PlaySound("cannon/overheat")
+		//CANB A 5
+		Goto Ready
+	FireFail:
+		CANB A 5 A_PlaySound("cannon/overheat")
+		CAN4 A 5
+		Goto Ready
+	}
+}
+ 
+actor TripleOverheat : Ammo
+{
+	inventory.maxamount 100
+	-INVENTORY.INVBAR
+}
+
+
+// Weapon Selection Control
+Actor WeaponToken : Inventory
+{
+	Inventory.MaxAMount 1
+}
+
+Actor Weapon1 :	WeaponToken {}
+Actor Weapon2 :	WeaponToken {}
+Actor Weapon3 :	WeaponToken {}
+Actor Weapon4 :	WeaponToken {}
+Actor Overheat2 : WeaponToken {}
+Actor Overheat3 : WeaponToken {}
+Actor Overheat4 : WeaponToken {}

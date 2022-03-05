@@ -1,0 +1,718 @@
+//Lights
+
+pointlight Light_PlasmaShot
+{
+	color 0.0 0.0 1.0
+	size 24
+}
+
+pointlight Light_MicroMissile
+{
+	color 1.0 0.5 0.0
+	size 24
+}
+
+pointlight Light_SentryShot
+{
+	color 1.0 0.0 0.0
+	size 8
+}
+
+pointlight Light_GhoulShot
+{
+	color 0.9 0.0 0.0
+	size 16
+}
+
+pointlight Light_BombshellBeep
+{
+	color 1.0 0.0 0.0
+	size 12
+}
+
+pointlight Light_BombshellEx1
+{
+	color 1.0 0.5 0.0
+	size 12
+}
+
+pointlight Light_BombshellEx2
+{
+	color 1.0 0.5 0.0
+	size 8
+}
+
+pointlight Light_BombshellEx3
+{
+	color 1.0 0.5 0.0
+	size 4
+}
+
+pointlight Light_BombshellParticle
+{
+	color 1.0 0.5 0.0
+	size 8
+}
+
+pointlight Light_BeetleShot
+{
+	color 0.0 1.0 0.0
+	size 16
+}
+
+pointlight Light_SurgeonShot
+{
+	color 0.0 0.0 1.0
+	size 8
+}
+
+pointlight Light_GeeWiz1
+{
+	color 1.0 0.25 1.0
+	size 24
+}
+
+pointlight Light_GeeWiz2
+{
+	color 1.0 0.25 1.0
+	size 20
+}
+
+pointlight Light_WizardShot
+{
+	color 1.0 0.25 1.0
+	size 24
+}
+
+pointlight Light_ImmortalLaser
+{
+	color 1.0 0.0 0.0
+	size 20
+}
+
+pointlight Light_ImmortalHoming
+{
+	color 1.0 0.0 0.0
+	size 32
+}
+
+pointlight Light_MassacristPlasmaBall
+{
+	color 1.0 0.25 1.0
+	size 24
+}
+
+pointlight Light_MassacristMatrix
+{
+	color 0.0 1.0 0.0
+	size 20
+}
+
+pointlight Light_MassacristThunderball
+{
+	color 0.0 1.0 1.0
+	size 96
+}
+
+pointlight Light_GathererFlameParticle
+{
+	color 1.0 0.5 0.0
+	size 12
+}
+
+pointlight Light_GathererLaserBall
+{
+	color 1.0 0.0 0.0
+	size 24
+}
+
+pointlight Light_SalvagedOnePlasmaBall
+{
+	color 0.0 1.0 1.0
+	size 12
+}
+
+pointlight Light_SalvagedOneRipperDisc
+{
+	color 0.0 1.0 0.0
+	size 16
+}
+
+pointlight Light_FloorLamp_Active
+{
+	color 1.0 1.0 1.0
+	size 64
+}
+
+pulselight Light_WarningLight
+{
+	color 1.0 0.0 0.0
+	size 32
+	secondarysize 128
+	interval 2
+}
+
+//Objects
+
+object PlasmaShot2
+{
+	frame PBALA0
+	{
+		light Light_PlasmaShot
+	}
+}
+
+object MicroMissile2
+{
+	frame MISFA1
+	{
+		light Light_MicroMissile
+	}
+	frame MISFA8A2
+	{
+		light Light_MicroMissile
+	}
+	frame MISFA7A3
+	{
+		light Light_MicroMissile
+	}
+	frame MISFA6A4
+	{
+		light Light_MicroMissile
+	}
+	frame MISFA5
+	{
+		light Light_MicroMissile
+	}
+}
+
+object SentryShot
+{
+	frame SPRJA0
+	{
+		light Light_SentryShot
+	}
+}
+
+object GhoulShot
+{
+	frame GPRJA0
+	{
+		light Light_GhoulShot
+	}
+}
+
+object Bombshell
+{
+	frame BOMSF0
+	{
+		light Light_BombshellBeep
+	}
+	frame BOMSH0
+	{
+		light Light_BombshellEx1
+	}
+	frame BOMSI0
+	{
+		light Light_BombshellEx2
+	}
+	frame BOMSJ0
+	{
+		light Light_BombshellEx3
+	}
+}
+
+object BombshellParticle
+{
+	frame BOMXA0
+	{
+		light Light_BombshellParticle
+	}
+	frame BOMXB0
+	{
+		light Light_BombshellParticle
+	}
+	frame BOMXC0
+	{
+		light Light_BombshellParticle
+	}
+}
+
+object BeetleShot
+{
+	frame BPRJA0
+	{
+		light Light_BeetleShot
+	}
+}
+
+object SurgeonShot
+{
+	frame SPR2A0
+	{
+		light Light_SurgeonShot
+	}
+}
+
+object GeeWiz
+{
+	frame GWIZE0
+	{
+		light Light_GeeWiz1
+	}
+	frame GWIZF0
+	{
+		light Light_GeeWiz2
+	}
+}
+
+object WizardShot
+{
+	frame WPRJA0
+	{
+		light Light_WizardShot
+	}
+}
+
+object ImmortalLaser
+{
+	frame IPR1A0
+	{
+		light Light_ImmortalLaser
+	}
+}
+
+object ImmortalHoming
+{
+	frame IPR2A0
+	{
+		light Light_ImmortalHoming
+	}
+}
+
+object MassacristPlasmaBall
+{
+	frame MSP2A0
+	{
+		light Light_MassacristPlasmaBall
+	}
+}
+
+object MassacristMatrix
+{
+	frame MSP1A0
+	{
+		light Light_MassacristMatrix
+	}
+}
+
+object MassacristThunderball
+{
+	frame MSP3A0
+	{
+		light Light_MassacristThunderball
+	}
+	frame MSP3B0
+	{
+		light Light_MassacristThunderball
+	}
+	frame MSP3C0
+	{
+		light Light_MassacristThunderball
+	}
+}
+
+object ProjectileThunderball
+// Simply a duplicate of the above for the player's Thunderball shots.
+{
+	frame MSP3A0
+	{
+		light Light_MassacristThunderball
+	}
+	frame MSP3B0
+	{
+		light Light_MassacristThunderball
+	}
+	frame MSP3C0
+	{
+		light Light_MassacristThunderball
+	}
+}
+
+object FloorLamp_Active
+{
+	frame LMP1A0
+	{
+		light Light_FloorLamp_Active
+	}
+}
+
+object WarningLight
+{
+	frame RLITA0
+	{
+		light Light_WarningLight
+	}
+}
+
+object GathererFlameParticle
+{
+	frame GPR1A0
+	{
+		light Light_GathererFlameParticle
+	}
+}
+
+object GathererLaserBall
+{
+	frame GPR2A0
+	{
+		light Light_GathererLaserBall
+	}
+}
+
+object SalvagedOnePlasmaBall
+{
+	frame FBP1A0
+	{
+		light Light_SalvagedOnePlasmaBall
+	}
+}
+
+object SalvagedOneRipperDisc
+{
+	frame FBP2A0
+	{
+		light Light_SalvagedOneRipperDisc
+	}
+}
+
+//Glows
+
+glow
+{
+	texture "LAVA",FF4000,24,fullbright
+	texture "GRNSHIT",00FF00,8,fullbright
+}
+
+//Brightmaps
+
+brightmap texture BUTNRCT1
+{
+	map brightmaps/bmbtnrc1.png
+}
+
+brightmap texture BUTNRCT2
+{
+	map brightmaps/bmbtnrc2.png
+}
+
+brightmap texture BUTN_C1
+{
+	map brightmaps/bmbutn_c.png
+}
+
+brightmap texture BUTN_C2
+{
+	map brightmaps/bmbutn_c.png
+}
+
+brightmap texture BUTN_D1
+{
+	map brightmaps/bmbutn_d.png
+}
+
+brightmap texture BUTN_D2
+{
+	map brightmaps/bmbutn_d.png
+}
+
+brightmap texture BUTN_U1
+{
+	map brightmaps/bmbutn_u.png
+}
+
+brightmap texture BUTN_U2
+{
+	map brightmaps/bmbutn_u.png
+}
+
+brightmap texture BUTNPAN1
+{
+	map brightmaps/bmbutnpa.png
+}
+
+brightmap texture BUTNPAN2
+{
+	map brightmaps/bmbutnpa.png
+}
+
+brightmap texture HOLO_B
+{
+	map brightmaps/bmholo.png
+}
+
+brightmap texture HOLO_G
+{
+	map brightmaps/bmholo.png
+}
+
+brightmap texture HOLO_BX
+{
+	map brightmaps/bmholox.png
+}
+
+brightmap texture LEVEL1
+{
+	map brightmaps/bmlevel1.png
+}
+
+brightmap texture LEVEL2
+{
+	map brightmaps/bmlevel2.png
+}
+
+brightmap texture LEVEL3
+{
+	map brightmaps/bmlevel3.png
+}
+
+brightmap texture LEVEL4
+{
+	map brightmaps/bmlevel4.png
+}
+
+brightmap texture SHIPBODY
+{
+	map brightmaps/bmshipbo.png
+}
+
+brightmap sprite BETLF0
+{
+	map brightmaps/bmbetlf.png
+}
+
+brightmap sprite BETLG0
+{
+	map brightmaps/bmbetlg.png
+}
+
+brightmap sprite BETLH0
+{
+	map brightmaps/bmbetlh.png
+}
+
+brightmap sprite BETLI0
+{
+	map brightmaps/bmbetli.png
+}
+
+brightmap sprite GHULB0
+{
+	map brightmaps/bmghulb.png
+}
+
+brightmap sprite GRIMF0
+{
+	map brightmaps/bmgrimf.png
+}
+
+brightmap sprite GWIZE0
+{
+	map brightmaps/bmgwize.png
+}
+
+brightmap sprite GWIZF0
+{
+	map brightmaps/bmgwizf.png
+}
+
+brightmap sprite SNTRF0
+{
+	map brightmaps/bmsntrf.png
+}
+
+brightmap sprite SURGD0
+{
+	map brightmaps/bmsurgd.png
+}
+
+brightmap sprite MASRA0
+{
+	map brightmaps/bmmasr.png
+}
+
+brightmap sprite MASRB0
+{
+	map brightmaps/bmmasr.png
+}
+
+brightmap sprite MASRC0
+{
+	map brightmaps/bmmasr.png
+}
+
+brightmap sprite MASRD0
+{
+	map brightmaps/bmmasr.png
+}
+
+brightmap sprite MASRE0
+{
+	map brightmaps/bmmasr.png
+}
+
+brightmap sprite MASRF0
+{
+	map brightmaps/bmmasr.png
+}
+
+brightmap sprite MASRG0
+{
+	map brightmaps/bmmasr.png
+}
+
+brightmap sprite GATHA0
+{
+	map brightmaps/bmgath.png
+}
+
+brightmap sprite GATHB0
+{
+	map brightmaps/bmgath.png
+}
+
+brightmap sprite GATHC0
+{
+	map brightmaps/bmgath.png
+}
+
+brightmap sprite GATHD0
+{
+	map brightmaps/bmgath.png
+}
+
+brightmap sprite GATHE0
+{
+	map brightmaps/bmgath.png
+}
+
+brightmap sprite GATHF0
+{
+	map brightmaps/bmgath.png
+}
+
+brightmap sprite FBOSA0
+{
+	map brightmaps/bmfbos.png
+}
+
+brightmap sprite FBOSB0
+{
+	map brightmaps/bmfbos.png
+}
+
+brightmap sprite FBOSC0
+{
+	map brightmaps/bmfbos.png
+}
+
+brightmap sprite FBOSD0
+{
+	map brightmaps/bmfbos.png
+}
+
+brightmap sprite FBOSE0
+{
+	map brightmaps/bmfbos.png
+}
+
+brightmap sprite FBOSF0
+{
+	map brightmaps/bmfbos.png
+}
+
+brightmap sprite CAN1A0
+{
+	map brightmaps/bmcan1.png
+}
+
+brightmap sprite CAN1B0
+{
+	map brightmaps/bmcan1.png
+}
+
+brightmap sprite CAN1C0
+{
+	map brightmaps/bmcan1.png
+}
+
+brightmap sprite CAN2A0
+{
+	map brightmaps/bmcan2.png
+}
+
+brightmap sprite CAN2B0
+{
+	map brightmaps/bmcan2.png
+}
+
+brightmap sprite CAN2C0
+{
+	map brightmaps/bmcan2.png
+}
+
+brightmap sprite CAN3A0
+{
+	map brightmaps/bmcan3.png
+}
+
+brightmap sprite CAN3B0
+{
+	map brightmaps/bmcan3.png
+}
+
+brightmap sprite CAN3C0
+{
+	map brightmaps/bmcan3.png
+}
+
+brightmap sprite CAN4A0
+{
+	map brightmaps/bmcan4.png
+}
+
+brightmap sprite CAN4B0
+{
+	map brightmaps/bmcan4.png
+}
+
+brightmap sprite CAN4C0
+{
+	map brightmaps/bmcan4.png
+}
+
+brightmap sprite CANBB0
+{
+	map brightmaps/bmcanbb.png
+}
+
+brightmap sprite KLV1A0
+{
+	map brightmaps/bmklv1.png
+}
+
+brightmap sprite KLV2A0
+{
+	map brightmaps/bmklv2.png
+}
+
+brightmap sprite KLV3A0
+{
+	map brightmaps/bmklv3.png
+}
+
+brightmap sprite KLV4A0
+{
+	map brightmaps/bmklv4.png
+}

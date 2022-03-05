@@ -1,0 +1,16 @@
+#library "critflas"
+#include "zcommon.acs"
+
+
+script 998 ENTER
+{
+	if(getactorproperty(0,APROP_Health) < 26 && getactorproperty(0,APROP_Health) > 0)
+	{
+		fadeto(255,0,0,getcvar("d2600_flashamount"),1.0);
+		delay(35);
+		fadeto(255,0,0,0.0,1.0);
+		delay(35);
+	}
+	delay(5);
+	restart;
+}

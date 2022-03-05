@@ -1,0 +1,6 @@
+Graphic M_DOOM, 288, 32
+{
+	XScale 2
+	YScale 2
+	Patch M_DOOM, 0, 0
+}

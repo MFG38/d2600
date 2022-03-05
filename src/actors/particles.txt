@@ -1,0 +1,54 @@
+actor Particle_Base
+{
+	renderstyle translucent
+	alpha 0.8
+	+NOGRAVITY
+	+NOINTERACTION
+	+NOBLOCKMAP
+}
+
+actor SpaceshipExhaustParticle : Particle_Base
+{
+	States
+	{
+	Spawn:
+		PARB ABCDE 2 BRIGHT
+		TNT1 A 1
+		Stop
+	}
+}
+
+actor SpaceshipExhaustParticleSpawner 13800
+{
+	//$category D2600_ParticleFX
+	spawnid 200
+	States
+	{
+	Spawn:
+		TNT1 A 2 A_SpawnItemEx("SpaceshipExhaustParticle",random(-1,1),random(-1,1),0,0,0,4)
+		Loop
+	}
+}
+
+actor LavaParticle : Particle_Base
+{
+	States
+	{
+	Spawn:
+		PARO ABCD 2 BRIGHT
+		TNT1 A 1
+		Stop
+	}
+}
+
+actor LavaParticleSpawner 13801
+{
+	//$category D2600_ParticleFX
+	spawnid 201
+	States
+	{
+	Spawn:
+		TNT1 A 4 A_SpawnItemEx("LavaParticle",random(-64,64),random(-64,64),0,0,0,3)
+		Loop
+	}
+}

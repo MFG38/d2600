@@ -1,0 +1,15 @@
+#library "glscan"
+#include "zcommon.acs"
+
+
+script 999 ENTER
+{
+	if(getcvar("vid_renderer") == 0)
+	{
+		print(s:"Your renderer is currently in SOFTWARE mode.\n\nPlease switch your renderer to HARDWARE mode\nto play as intended.");
+	}
+	else
+	{
+		delay(1);
+	}
+}

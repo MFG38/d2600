@@ -1,0 +1,33 @@
+clearlocks
+
+lock 1 Doom
+{
+	ClearanceCard_Level1	//Corresponds to RedCard
+	message "LEVEL 1 CLEARANCE REQUIRED"
+	remotemessage "LEVEL 1 CLEARANCE REQUIRED"
+	mapcolor 0 255 0
+}
+
+lock 2 Doom
+{
+	ClearanceCard_Level2	//Corresponds to BlueCard
+	message "LEVEL 2 CLEARANCE REQUIRED"
+	remotemessage "LEVEL 2 CLEARANCE REQUIRED"
+	mapcolor 255 255 0
+}
+
+lock 3 Doom
+{
+	ClearanceCard_Level3	//Corresponds to YellowCard
+	message "LEVEL 3 CLEARANCE REQUIRED"
+	remotemessage "LEVEL 3 CLEARANCE REQUIRED"
+	mapcolor 255 128 0
+}
+
+lock 4 Doom
+{
+	ClearanceCard_Level4	//Corresponds to RedSkull
+	message "LEVEL 4 CLEARANCE REQUIRED"
+	remotemessage "LEVEL 4 CLEARANCE REQUIRED"
+	mapcolor 255 0 0
+}

@@ -1,0 +1,64 @@
+actor SmallMedPack : Health 20000
+{
+	//$category D2600_HealthItems
+	spawnid 1
+	inventory.amount 5
+	inventory.maxamount 999
+	inventory.pickupmessage "Small Med Pack (+5)"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		SMED A -1 BRIGHT
+		Stop
+	}
+}
+
+actor MediumMedPack : Health 20001
+{
+	//$category D2600_HealthItems
+	spawnid 2
+	inventory.amount 25
+	inventory.maxamount 999
+	inventory.pickupmessage "Medium Med Pack (+25)"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		MMED A -1 BRIGHT
+		Stop
+	}
+}
+
+actor LargeMedPack : Health 20002
+{
+	//$category D2600_HealthItems
+	spawnid 3
+	inventory.amount 50
+	inventory.maxamount 999
+	inventory.pickupmessage "Large Med Pack (+50)"
+	inventory.pickupsound "pickup/item"
+	States
+	{
+	Spawn:
+		LMED A -1 BRIGHT
+		Stop
+	}
+}
+
+actor SuperMedPack : Health 20003
+{
+	//$category D2600_HealthItems
+	spawnid 4
+	inventory.amount 100
+	inventory.maxamount 999
+	inventory.pickupmessage "Super Med Pack (+100)"
+	inventory.pickupsound "pickup/item"
+	+COUNTITEM
+	States
+	{
+	Spawn:
+		XMED A -1 BRIGHT
+		Stop
+	}
+}

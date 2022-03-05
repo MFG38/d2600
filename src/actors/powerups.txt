@@ -1,0 +1,105 @@
+actor PowerQuadDamage : PowerDamage
+{
+	damagefactor "normal",4
+	damagefactor "missile",1
+}
+
+actor QuadDamagePowerup : PowerupGiver 20004
+{
+	//$category D2600_Powerups
+	inventory.icon "PWR_QDMG"
+	inventory.maxamount 1
+	inventory.pickupmessage "Quad Damage Powerup"
+	inventory.pickupsound "pickup/powerup"
+	powerup.color FF0000 0.1
+	powerup.type QuadDamage
+	powerup.duration -30
+	scale 0.75
+	+COUNTITEM
+	States
+	{
+	Spawn:
+		QDMG A -1 BRIGHT
+		Stop
+	}
+}
+
+actor InvulnerabilityPowerup : PowerupGiver 20005
+{
+	//$category D2600_Powerups
+	inventory.icon "PWR_INVL"
+	inventory.maxamount 1
+	inventory.pickupmessage "Invulnerability Powerup"
+	inventory.pickupsound "pickup/powerup"
+	powerup.color 00FFFF 0.1
+	powerup.type Invulnerable
+	powerup.duration -15
+	scale 0.75
+	+COUNTITEM
+	States
+	{
+	Spawn:
+		INVL A -1 BRIGHT
+		Stop
+	}
+}
+
+actor HealthRegenPowerup : PowerupGiver 20006
+{
+	//$category D2600_Powerups
+	inventory.icon "PWR_REGN"
+	inventory.maxamount 1
+	inventory.pickupmessage "Regeneration Powerup"
+	inventory.pickupsound "pickup/powerup"
+	powerup.color 00FF00 0.1
+	powerup.type Regeneration
+	powerup.duration -15
+	scale 0.75
+	+COUNTITEM
+	States
+	{
+	Spawn:
+		REGN A -1 BRIGHT
+		Stop
+	}
+}
+
+actor FlightPowerup : PowerupGiver 20007
+{
+	//$category D2600_Powerups
+	inventory.icon "PWR_WING"
+	inventory.maxamount 1
+	inventory.pickupmessage "Flight Powerup"
+	inventory.pickupsound "pickup/powerup"
+	powerup.color FF40FF 0.1
+	powerup.type Flight
+	powerup.duration -30
+	+COUNTITEM
+	scale 0.75
+	States
+	{
+	Spawn:
+		WING A -1 BRIGHT
+		Stop
+	}
+}
+
+actor InvisibilityPowerup : PowerupGiver 20008
+{
+	//$category D2600_Powerups
+	inventory.icon "PWR_SHDW"
+	inventory.maxamount 1
+	inventory.pickupmessage "Invisibility Powerup"
+	inventory.pickupsound "pickup/powerup"
+	powerup.color 0C0C0C 0.1
+	powerup.type Shadow
+	powerup.duration -30
+	+COUNTITEM
+	scale 0.75
+	States
+	{
+	Spawn:
+		SHDW A -1 BRIGHT
+		Stop
+	}
+}

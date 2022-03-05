@@ -1,0 +1,107 @@
+//GameInfo definition
+
+gameinfo
+{
+	playerclasses = "DeliverancePlayer"
+	dimcolor = "00 00 00"
+	dimamount = 1.0
+	quitsound = "menu/quit"
+}
+
+//Episode definition
+
+clearepisodes
+
+episode INTROMAP
+{
+	name = "Deliverance 2600"
+}
+
+//Map definitions
+
+map TITLEMAP "Title"
+{
+	music = "D2600TTL"
+}
+
+map INTROMAP "Intro"
+{
+	next = "MAP01"
+	music = "CRUSADER"
+	nointermission
+}
+
+map MAP01 "Ferrus XII - Research Facility"
+{
+	par = 0
+	music = "THEYLURK"
+	forcefallingdamage
+	allowmonstertelefrags	//Apparently this doesn't *force* monsters to spawn...
+	noinfighting
+}
+
+//Skill definitions
+
+clearskills
+
+skill easy
+{
+	name = "Wimp"
+	acsreturn = 1
+	mustconfirm = "Easy difficulty for casual players."
+	spawnfilter = hard
+	damagefactor = 0.5
+	aggressiveness = 0.1
+}
+
+skill normal
+{
+	name = "Hardened"
+	acsreturn = 2
+	mustconfirm = "Standard difficulty for average players."
+	spawnfilter = hard
+	damagefactor = 1.0
+	aggressiveness = 0.5
+	defaultskill
+}
+
+skill hard
+{
+	name = "Veteran"
+	acsreturn = 3
+	mustconfirm = "Hard difficulty for challenge seekers."
+	spawnfilter = hard
+	damagefactor = 1.5
+	aggressiveness = 0.5
+}
+
+skill nightmare
+{
+	name = "Total Badass"
+	acsreturn = 4
+	mustconfirm = "The survival test for the ultimate warrior."
+	spawnfilter = hard
+	damagefactor = 2.0
+	aggressiveness = 1.0
+}
+
+skill impossible
+{
+	name = "D2600 God"
+	acsreturn = 5
+	mustconfirm = "No health pickups. No powerups.\
+		Just you and them."
+	spawnfilter = hard
+	damagefactor = 2.5
+	aggressiveness = 1.0
+	replaceactor = "SmallMedPack","Nada"
+	replaceactor = "MediumMedPack","Nada"
+	replaceactor = "LargeMedPack","Nada"
+	replaceactor = "SuperMedPack","Nada"
+	replaceactor = "QuadDamagePowerup","Nada"
+	replaceactor = "InvisibilityPowerup","Nada"
+	replaceactor = "HealthRegenPowerup","Nada"
+	replaceactor = "FlightPowerup","Nada"
+	replaceactor = "InvulnerabilityPowerup","Nada"
+	disablecheats
+}

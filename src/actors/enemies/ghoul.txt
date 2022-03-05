@@ -1,0 +1,65 @@
+actor Ghoul 21002
+{
+	//$category D2600_Enemies
+	spawnid 8
+	health 140
+	painchance 128
+	speed 5
+	height 32
+	radius 12
+	mass 50
+	obituary "A ghoul spooked %o."
+	painsound "general/pain"
+	seesound "ghoul/see"
+	activesound "ghoul/idle"
+	deathsound "ghoul/death"
+	MONSTER
+	+NOGRAVITY
+	+FLOAT
+	+NOBLOOD
+	States
+	{
+	Spawn:
+		GHUL A 1 A_Wander
+		GHUL A 0 A_Look
+		Loop
+	See:
+		GHUL A 1 A_Chase
+		Loop
+	Missile:
+		GHUL B 4 A_FaceTarget
+		GHUL B 4 A_CustomMissile("GhoulShot",7)
+		GHUL B 4
+		Goto See
+	Pain:
+		GHUL C 2 BRIGHT A_Pain
+		GHUL A 2
+		GHUL C 2 BRIGHT
+		Goto See
+	Death:
+		GHUL C 4 A_Scream
+		GHUL CCCCCCCCCC 4 A_FadeOut(0.1)
+		Stop
+	}
+}
+
+actor GhoulShot
+{
+	height 4
+	radius 2
+	damage 3
+	speed 8
+	renderstyle translucent
+	alpha 0.9
+	PROJECTILE
+	+SEEKERMISSILE
+	States
+	{
+	Spawn:
+		GPRJ A 1 BRIGHT A_SeekerMissile(0,1)
+		Loop
+	Death:
+		GPRJ A 2
+		Stop
+	}
+}
