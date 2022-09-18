@@ -1,0 +1,290 @@
+Final 1.32 (22-07-2019):
+
+- Fixed an extremely stupid mistake in the rank system code that essentially made rank A impossible to obtain.
+- Fixed the overheat mechanic so that the cooldown isn't tied to the weapon states (credit goes to Dude27th for the fix).
+- Added a duplicate version of the Thunderball that doesn't hurt the player (credit goes to Dude27th for the fix).
+- Added Dude27th to the credits sequence.
+
+
+
+Final 1.31 (19-04-2019):
+
+- Moved the D2600 cvar menu back under the normal options menu ("Settings" > "Deliverance 2600 Settings").
+- Added: a bunch of SetHudSize stuff to fix text not displaying correctly at certain resolutions.
+- Modified: script for Sentry enemy type (changed its projectile's damage formula to deal 2-5 damage instead of 2-8).
+- Modified: script for Wizard enemy type (increased its projectile's damage from 8 to 9 and speed from 10 to 12).
+
+
+
+Final 1.3 (08-07-2018):
+
+- Implemented: autosave message skipping console variable.
+- Implemented: D2600 God health refill console variable (occurs at autosave points if the cvar is enabled).
+- Modified: MAP01 (smoothed off the edges of the rock platforms in the lava areas and cleaned up the automap view).
+
+
+
+Final 1.23 (03-07-2018):
+
+- Modified: text strings (changed "More Settings" to "D2600 Settings" and removed "Yep"/"Nope").
+- Modified: sprite offsets for all enemy sprites to make them OpenGL-friendly.
+- Modified: script for Beetle enemy type (reduced pain chance from 128 to 80).
+- Modified: ending sequence script (added an extra digit to the damage number taken by the player when they "die").
+
+
+
+Final 1.22 (23-01-2018):
+
+- Modified: script for Surgeon enemy type (fixed a typo in its obituary message).
+- Modified: menu scripts (moved cvar setup to main menu because GZDoom 3.2.1 apparently broke the submenus).
+- Modified: custom text strings (changed "Setup" to "Settings" and added "More Settings").
+
+
+
+Final 1.21 (30-09-2017):
+
+- Modified: text strings (fixed so they don't get overwritten by GZDoom's default ones in newer versions).
+- Modified: miscellaneous scripts (replaced all instances of NULL with TNT1).
+
+
+
+Final 1.2 (25-06-2017):
+
+- Implemented: removal of HUD during opening and ending sequences.
+
+
+
+Final 1.1 (23-04-2017):
+
+- Implemented: "D2600 God" difficulty level. No health pickups. No powerups. Just you and them.
+- Modified: MAP01 (changed a couple of textures here and there).
+
+
+
+Final 1.02 (19-04-2017):
+
+- Added a duplicate of "help.png" named "help1.png" to make the help screen compatible with Doom 1.
+- Modified: script for Bombshell enemy type (increased explosion damage from 32 to 40 and fixed a typo).
+- Modified: scripts for cannons (removed two cycles from the "Overheat" states).
+- Modified: positioning of overheat counters in the HUD.
+
+
+
+Final 1.01 (18-04-2017):
+
+- Modified: scripts for all enemy types (increased maxstepheight from 0 to 1).
+- Modified: MAPINFO (deleted unnecessary lines for the now-non-existent TESTMAP).
+
+
+
+Final 1.0 (16-04-2017):
+
+- Final release version.
+- Modified: health of Beetle enemy type (reduced from 350 to 300).
+- Modified: health of Berserker enemy type (reduced from 800 to 600).
+- Modified: health of Ghoul enemy type (reduced from 160 to 140).
+- Modified: health of Surgeon enemy type (reduced from 425 to 325).
+- Modified: health of Wizard enemy type (reduced from 500 to 400).
+- Modified: positioning of skill level list in skill selection menu.
+- Modified: MAP01.
+- Removed: 1 texture.
+
+
+
+Beta 0.9 (24-02-2017):
+
+- Implemented: custom difficulty levels.
+- Added: 2 sound effects (current total: 64).
+- Added: colormap.
+- Modified: speed of plasma cannon projectile (increased from 25 to 30).
+- Modified: speed of micro missile (increased from 20 to 24).
+- Modified: health of Sentry enemy type (reduced from 50 to 40).
+- Modified: script for The Salvaged One boss.
+- Removed: TESTMAP.
+
+
+
+Alpha 0.8 (18-02-2017):
+
+- Implemented: The Salvaged One boss.
+- Added: 1 graphic (current total: 107).
+- Added: 3 textures (current total: 72).
+- Added: 8 sprites (current total: 179).
+- Added: 7 brightmaps (current total: 31).
+- Added: 16 sound effects (current total: 62).
+- Added: 1 music track (current total: 9).
+- Modified: OpenGL effects.
+- Modified: script for Berserker enemy type.
+- Modified: script for Wizard enemy type.
+- Modified: script for Gatherer boss.
+- Modified: some text strings.
+- Modified: MAP01.
+- Modified: TESTMAP.
+
+
+
+Alpha 0.7 (07-09-2016):
+
+- Implemented: Gatherer boss.
+- Implemented: Triple Shot cannon.
+- Added: 12 sprites (current total: 171).
+- Added: 5 sound effects (current total: 46).
+- Added: 1 music track (current total: 8).
+- Added: 1 brightmap (current total: 24).
+- Revised: 1 music track.
+- Modified: script for status bar.
+- Modified: script for Surgeon enemy type.
+- Modified: scripts for all cannons.
+- Modified: MAP01.
+- Modified: TESTMAP.
+
+
+
+Alpha 0.6 (25-05-2016):
+
+- Added: 1 graphic (current total: 106).
+- Added: 2 sound effects (current total: 41).
+- Modified: critical health screen flash menu option (changed into a slider).
+- Modified: scripts for Laser and Thunderball cannons.
+- Modified: script for Massacrist boss.
+- Modified: 1 brightmap.
+- Modified: MAP01.
+- Modified: TITLEMAP.
+
+
+
+Alpha 0.5 (21-02-2016):
+
+- Implemented: Laser and Thunderball cannons.
+- Implemented: Massacrist boss.
+- Added: 5 sound effects (current total: 39).
+- Added: 1 music track (current total: 7).
+- Added: 33 sprites (current total: 159).
+- Added: 1 brightmap (current total: 23).
+- Revised: 1 sound effect.
+- Revised: cannon sprite set.
+- Modified: script for Beetle enemy type.
+- Modified: OpenGL effects.
+- Modified: MAP01.
+- Modified: TESTMAP.
+- Removed: 4 sprites.
+
+
+
+Alpha 0.4 (23-12-2015):
+
+- Implemented: decals.
+- Implemented: brightmaps.
+- Implemented: 1 additional prop.
+- Implemented: high-resolution graphics.
+- Added: 6 graphics (current total: 105).
+- Added: 7 textures (current total: 69).
+- Added: 22 brightmaps (current total: 22).
+- Added: 2 sound effects (current total: 34).
+- Modified: scripts for two of the floor lamp props.
+- Modified: script for Surgeon enemy type.
+- Modified: script for Wizard enemy type.
+- Modified: OpenGL effects.
+- Modified: 1 graphic.
+- Modified: INTROMAP.
+- Modified: MAP01.
+- Modified: placement of status bar elements.
+- Modified: some text strings.
+- Revised: TITLEMAP.
+- Removed: powerup randomizer script/console variable.
+
+
+
+Alpha 0.31 (26-09-2015):
+
+- Modified: script for particle effects (the previous version of the script would cause lag).
+- Modified: MAP01.
+
+
+
+Alpha 0.3 (26-09-2015):
+
+- Implemented: Great Immortal boss.
+- Implemented: credits sequence/rank system script.
+- Implemented: play credits sequence console variable.
+- Added: 4 textures (current total: 62).
+- Added: 17 sprites (current total: 130).
+- Added: 2 sound effects (current total: 32).
+- Added: 1 music track (current total: 6).
+- Modified: 6 graphics.
+- Modified: some sound effects that were barely audible.
+- Modified: script for Sentry enemy type.
+- Modified: OpenGl effects.
+- Modified: MAP01.
+- Modified: TESTMAP.
+
+
+
+Alpha 0.2 (02-08-2015):
+
+- Implemented: props (4 varieties).
+- Implemented: Berserker enemy type.
+- Implemented: Wizard enemy type.
+- Implemented: critical health screen flash script.
+- Implemented: screen flash amount console variable.
+- Implemented: randomized powerups console variable.
+- Added: 1 texture (current total: 58).
+- Added: 32 sprites (current total: 113).
+- Added: 12 sound effects (current total: 30).
+- Added: 3 music tracks (current total: 5).
+- Revised: Assassin sprite set.
+- Modified: OpenGL effects.
+- Modified: INTROMAP.
+- Modified: MAP01.
+- Modified: TESTMAP.
+- Modified: TITLEMAP.
+
+
+
+Alpha 0.1 (14-07-2015):
+
+- Implemented: powerups (5 varieties).
+- Implemented: inventory icons.
+- Implemented: custom text strings.
+- Implemented: custom sounds.
+- Implemented: custom music.
+- Implemented: custom keys and locks.
+- Implemented: renderer scan script.
+- Modified: MAP01.
+- Modified: TESTMAP.
+- Modified: script for plasma cannon.
+- Modified: script for micro missiles.
+- Modified: scripts for each Pre-Alpha enemy type.
+- Modified: OpenGL effects.
+- Revised: plasma cannon sprite set.
+- Added: 12 graphics (current total: 111).
+- Added: 11 textures (current total: 57).
+- Added: 17 sprites (current total: 81).
+- Added: 2 music tracks (current total: 2).
+- Added: 18 sound effects (current total: 18).
+- Added: INTROMAP.
+- Added: TITLEMAP.
+
+
+
+Pre-Alpha (28-05-2015):
+
+- First public test build.
+- Implemented: custom color palette.
+- Implemented: custom HUD.
+- Implemented: custom fonts.
+- Implemented: plasma cannon (primary fire).
+- Implemented: micro missiles (secondary fire).
+- Implemented: med packs (4 varieties).
+- Implemented: Sentry enemy type.
+- Implemented: Assassin enemy type.
+- Implemented: Ghoul enemy type.
+- Implemented: Bombshell enemy type.
+- Implemented: Beetle enemy type.
+- Implemented: Surgeon enemy type.
+- Implemented: OpenGL effects.
+- Added: 46 textures (current total: 46).
+- Added: 64 sprites (current total: 64).
+- Added: 99 graphics (current total: 99).
+- Added: MAP01.
+- Added: TESTMAP.
